@@ -1,5 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import { Basket } from "./pages/Basket";
+import { Categories } from "./pages/Categories";
+import { CategoryItems } from "./pages/CategoryItems";
+import { PageNotFound } from "./pages/PageNotFound";
+import { ProductDetails } from "./pages/ProductDetails";
+import { Products } from "./pages/Products";
 
 function App() {
   return (
@@ -14,12 +20,12 @@ function App() {
         */}
 
         <Routes>
-          <Route path="/products" element={<h1>Products</h1>} />
-          <Route path="/products/:id" element={<h1>Product id</h1>} />
-          <Route path="/categories" element={<h1>Categories</h1>} />
-          <Route path="/categories/:id" element={<h1>Category id</h1>} />
-          <Route path="/basket" element={<h1>Basket</h1>} />
-          <Route path="*" element={<h1>Page not found!</h1>} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/categories/:id" element={<CategoryItems />} />
+          <Route path="/basket" element={<Basket />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
     </>

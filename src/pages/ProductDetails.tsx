@@ -15,20 +15,18 @@ export function ProductDetails() {
   if (product === null) return <h2>Loading...</h2>;
 
   return (
-    <div>
-      <section className="product-detail main-wrapper">
-        <img src={product.image} alt={product.title} />
-        <div
-          className="product-detail__side"
-          style={{ borderColor: "var(--yellow)" }}
-        >
-          <h3></h3>
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
-          <p>£{product.price}</p>
-          <button>Add to basket</button>
-        </div>
-      </section>
-    </div>
+    <section className="product-detail main-wrapper">
+      <img src={product.image} alt={product.title} />
+      <div
+        className="product-detail__side"
+        style={{ borderColor: "var(--yellow)" }}
+      >
+        <h3></h3>
+        <h2>{product.title}</h2>
+        <p>{product.description}</p>
+        <p>£{product.price}</p>
+        <button>Add to basket</button>
+      </div>
+    </section>
   );
 }
